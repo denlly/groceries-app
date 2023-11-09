@@ -26,7 +26,9 @@ export default function Signup() {
     email: "",
     password: "",
   });
+
   const nav = useNavigation();
+
   return (
     <SafeAreaView>
       <StatusBar style="dark"></StatusBar>
@@ -46,9 +48,9 @@ export default function Signup() {
                   maxLength={30}
                   value={userInfo.username}
                   placeholder="英文字母，数字，-，_等符号"
-                  onChangeText={(val)=>{
+                  onChangeText={(val) => {
                     // console.log('')
-                    setUserInfo({...userInfo,username:val})
+                    setUserInfo({ ...userInfo, username: val });
                   }}
                 ></TextInput>
               }
@@ -61,8 +63,8 @@ export default function Signup() {
                   maxLength={30}
                   value={userInfo.email}
                   placeholder="example@gmail.com"
-                  onChangeText={(val)=>{
-                    setUserInfo({...userInfo,email:val})
+                  onChangeText={(val) => {
+                    setUserInfo({ ...userInfo, email: val });
                   }}
                 ></TextInput>
               }
@@ -78,8 +80,8 @@ export default function Signup() {
                     value={userInfo.password}
                     placeholder="少于30位的英文，字母，符号组合"
                     keyboardType="ascii-capable"
-                    onChangeText={(val)=>{
-                      setUserInfo({...userInfo, password:val})
+                    onChangeText={(val) => {
+                      setUserInfo({ ...userInfo, password: val });
                     }}
                   ></TextInput>
                   <Ionicons
